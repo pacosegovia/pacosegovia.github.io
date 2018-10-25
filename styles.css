@@ -1,0 +1,93 @@
+@import "https://fonts.googleapis.com/css?family=Inconsolata";
+::-moz-selection {
+  color: #f9943a;
+  background: #ffffff;
+  /* WebKit/Blink Browsers */
+}
+::selection {
+  color: #f9943a;
+  background: #ffffff;
+  /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  color: #f9943a;
+  background: #ffffff;
+  /* Gecko Browsers */
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #f9943a;
+  -webkit-font-smoothing: antialiased;
+}
+body section {
+  margin: 0;
+  padding: 0;
+  max-width: 640px;
+}
+body img {
+  width: 80px;
+  display: block;
+  margin: 0 0 20px 0;
+}
+body span {
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  padding: 5px 10px;
+  color: white;
+}
+body p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.35;
+  color: #f5f5f5;
+  letter-spacing: -0.01em;
+  -moz-osx-font-smoothing: greyscale;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+body ul {
+  margin: 40px 0 0 0;
+  padding: 0;
+}
+body ul li {
+  display: block;
+  float: left;
+  margin-right: 30px;
+  font-family: "Inconsolata";
+}
+body ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Inconsolata";
+  font-size: 14px;
+  letter-spacing: 0.3em;
+}
+body ul li a:hover {
+  text-decoration: line-through;
+}
+
+@media all and (min-width: 1024px) {
+  body img {
+    width: 100px;
+    margin-bottom: 50px;
+  }
+  body section {
+    margin: 0;
+    padding: 60px;
+    max-width: none;
+    text-align: left;
+  }
+  body p {
+    max-width: 980px;
+    font-size: 2.7rem;
+  }
+  body li {
+    margin: 0 0 10px 0;
+  }
+  body li a {
+    font-size: 1rem !important;
+  }
+}
