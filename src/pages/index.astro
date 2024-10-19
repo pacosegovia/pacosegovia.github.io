@@ -1,0 +1,101 @@
+---
+import Contact from '@/components/sections/Contact.astro'
+import { Image } from 'astro:assets'
+import logoAvif from '@/assets/images/pacosegovia.avif'
+import Layout from '@/layouts/Layout.astro'
+import Work from '@/components/sections/Work.astro'
+---
+
+<Layout title='Paco Segovia. UI Engineer.'>
+  <header>
+    <Image
+      class='avatar'
+      src={logoAvif}
+      alt='Foto de Paco Segovia'
+      width={40}
+      height={40}
+    />
+    <h1>
+      <span>Paco Segovia</span>
+      <span>UI engineer</span>
+    </h1>
+  </header>
+  <p>
+    I am interested in CSS, JavaScript, design, digital products development,
+    and all about frontend stuff.
+  </p>
+  <p>
+    Currently, I <a href='#work'>work</a> as a UI engineer at RedRadix, and these
+    days it's common for me to work with frameworks like Next.js, Astro, and Shopify.
+  </p>
+
+  <p>
+    To improve my design skills, I trained at the <em>Instituto Tramontana</em> the
+    <em>Professional Program in Interaction Design</em>, and for everything
+    related to the web and programming, I am mostly self-taught.
+  </p>
+  <Work />
+  <Contact />
+</Layout>
+
+<style>
+  header {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .avatar {
+    border-radius: 50%;
+  }
+
+  h1 {
+    display: inline-flex;
+    flex-direction: column;
+
+    & > span:first-child {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    & > span:last-child {
+      font-size: 1rem;
+      color: var(--text-color-light);
+      font-weight: 200;
+    }
+  }
+
+  summary {
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1rem;
+    font-size: 0.8rem;
+    color: var(--text-color-light);
+    padding: 1rem;
+
+    &::marker {
+      content: none;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  header,
+  :global(section) {
+    padding-block: 1rem;
+
+    @media screen and (min-width: 768px) {
+      padding-block: 2rem;
+    }
+  }
+</style>
